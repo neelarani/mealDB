@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEALDB</title>
+
+  <!-- Poppins font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- DaisyUI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgButton: '#FFC107',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif']
+          },
+          backgroundImage: {
+            bgImg: 'url("/images/banner_1.png")'
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body class="font-poppins">
+  <header class="w-11/12 mx-auto py-6">
+    <nav>
+      <div class="flex justify-between items-center">
+        <div class="">
+          <img src="images/Tasty_HUT.png" alt="tasty hut">
+        </div>
+        <button class="bg-bgButton px-8 py-3 rounded-lg font-bold">sign Up</button>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <!-- banner section -->
+    <section>
+      <div class="w-full h-[400px] ">
+        <div
+          class="text-center bg-bgImg bg-blend-overlay bg-black bg-opacity-50 object-cover h-full w-full flex flex-col justify-center items-center space-y-4">
+          <h2 class="font-extrabold text-3xl text-white ">Taste Our Delicious <br> Best Foods</h2>
+          <p class="text-white text-sm w-2/4">There are many variations of passages of Lorem Ipsum available, but the
+            majority
+            have suffered alteration
+            in
+            some form,
+            by injected humou.</p>
+
+          <div class="flex items-center">
+            <i class="fa-solid fa-magnifying-glass bg-white py-3 px-2 rounded-l-lg"></i>
+            <input class="outline-none py-2 pr-36  flex-grow" type="text" placeholder="Search any food">
+            <button class="text-black bg-bgButton py-2 px-5 rounded-r-lg">Search</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- dynamic data -->
+    <section id="meal-section" class="w-11/12 mx-auto my-24">
+      <div>
+        <div id="thambnail" class=" grid grid-cols-1 md:grid-cols-2 gap-7 ">
+
+        </div>
+      </div>
+
+      <!-- modal -->
+      <div id="modal-container">
+        <dialog id="my_modal_1" class="modal">
+          <div class="modal-box">
+
+          </div>
+        </dialog>
+      </div>
+
+
+    </section>
+
+
+    <!-- Footer section -->
+    <footer class="footer bg-base-200 text-base-content p-10 ">
+      <nav>
+        <h6 class="footer-title">Section</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">Features</a>
+        <a class="link link-hover">Pricing</a>
+        <a class="link link-hover">FAQs</a>
+        <a class="link link-hover">About</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Section</h6>
+        <a class="link link-hover">UIUX Design</a>
+        <a class="link link-hover">Product Design</a>
+        <a class="link link-hover">Back End Developer</a>
+        <a class="link link-hover">Front End Developer</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+      <form>
+        <h6 class="footer-title">Newsletter</h6>
+        <fieldset class="form-control w-80">
+          <label class="label">
+            <span class="label-text">Enter your email address</span>
+          </label>
+          <div class="join gap-3">
+            <input type="text" placeholder="username@site.com" class="input input-bordered join-item" />
+            <button class="btn bg-bgButton">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+    </footer>
+
+  </main>
+  <script src="js/logic.js"></script>
+</body>
+
+</html>
