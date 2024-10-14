@@ -56,7 +56,7 @@
   <main>
     <!-- banner section -->
     <section>
-      <div class="w-full h-[400px] ">
+      <div id="container" class="w-full h-[400px]">
         <div
           class="text-center bg-bgImg bg-blend-overlay bg-black bg-opacity-50 object-cover h-full w-full flex flex-col justify-center items-center space-y-4">
           <h2 class="font-extrabold text-3xl text-white ">Taste Our Delicious <br> Best Foods</h2>
@@ -67,31 +67,32 @@
             some form,
             by injected humou.</p>
 
-          <div class="flex items-center">
+          <div class="flex items-center pb-10">
             <i class="fa-solid fa-magnifying-glass bg-white py-3 px-2 rounded-l-lg"></i>
-            <input class="outline-none py-2 pr-36  flex-grow" type="text" placeholder="Search any food">
-            <button class="text-black bg-bgButton py-2 px-5 rounded-r-lg">Search</button>
+            <input id="search-box" class="outline-none py-2  flex-grow" type="text" placeholder="Search any food">
+            <button onclick="handleSearch()" id="search-button"
+              class="text-black bg-bgButton py-2 px-5 rounded-r-lg">Search</button>
+          </div>
+
+          <!-- Spinner -->
+          <div id="spinner" class="hidden">
+            <span class="loading loading-spinner loading-lg text-white"></span>
           </div>
         </div>
       </div>
 
     </section>
 
-    <!-- dynamic data -->
-    <section id="meal-section" class="w-11/12 mx-auto my-24">
-      <div>
-        <div id="thambnail" class=" grid grid-cols-1 md:grid-cols-2 gap-7 ">
 
-        </div>
+    <!-- dynamic data -->
+    <section class="w-11/12 mx-auto my-24">
+      <div id="meal-container" class="grid grid-cols-1 md:grid-cols-2 gap-7">
+
       </div>
 
       <!-- modal -->
       <div id="modal-container">
-        <dialog id="my_modal_1" class="modal">
-          <div class="modal-box">
 
-          </div>
-        </dialog>
       </div>
 
 
