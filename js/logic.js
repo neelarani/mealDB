@@ -82,7 +82,7 @@ const mealDetails = async id => {
             </p>
             <div class="modal-action">
               <form method="dialog">
-                <button class="btn">Close</button>
+                <button class="btn bg-red-500">Close</button>
               </form>
             </div>
           </div>
